@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% include "elements/header.html" %}
+</head>
+<body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% include "elements/footer.html" %}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    {% if name %}
+      <h1>Hello {{ name }}!</h1>
+      <a href="http://localhost:3007/logout">Logout</a>
+    {% else %}
+      <h1>Hello, World!</h1>
+    {% endif %}
+{% endblock %}
