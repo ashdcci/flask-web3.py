@@ -26,6 +26,10 @@ class Routeclass(object):
     def address():
         return addressController.index()
 
+    @routes.route('/eth/geBalance',methods=['POST'])
+    def getBalance():
+        return addressController.getBalance()
+
     @routes.route('/contract')
     def contract():
         return contractController.index()

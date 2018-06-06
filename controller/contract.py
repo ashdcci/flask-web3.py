@@ -1,20 +1,21 @@
 from flask import Flask,jsonify, request
 # import numpy
 from web3 import Web3, HTTPProvider, IPCProvider
+
 import sample_flask_app.config.devConfig as config
 import os, sys, json, logging, numpy
 from web3.contract import ConciseContract
 # import json
 # import logging
 # import sys
-from web3.middleware.pythonic import (
-    pythonic_middleware,
-    to_hexbytes,
-)
+# from web3.middleware.pythonic import (
+#     pythonic_middleware,
+#     to_hexbytes,
+# )
 
-size_extraData_for_poa = 200   # can change
-pythonic_middleware.__closure__[2].cell_contents['eth_getBlockByNumber'].args[1].args[0]['extraData'] = to_hexbytes(size_extraData_for_poa, variable_length=True)
-pythonic_middleware.__closure__[2].cell_contents['eth_getBlockByHash'].args[1].args[0]['extraData'] = to_hexbytes(size_extraData_for_poa, variable_length=True)
+# size_extraData_for_poa = 200   # can change
+# pythonic_middleware.__closure__[2].cell_contents['eth_getBlockByNumber'].args[1].args[0]['extraData'] = to_hexbytes(size_extraData_for_poa, variable_length=True)
+# pythonic_middleware.__closure__[2].cell_contents['eth_getBlockByHash'].args[1].args[0]['extraData'] = to_hexbytes(size_extraData_for_poa, variable_length=True)
 
 class ContractController(object):
     
