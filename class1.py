@@ -1,4 +1,4 @@
-
+from web3 import Web3, HTTPProvider, IPCProvider
 #from sys import exit
 class MyClass(object):
 	"This is my second class"
